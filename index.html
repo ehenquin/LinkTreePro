@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Eduardo Henquín | Enlaces</title>
+    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+
+    <style>
+        /* --- VARIABLES DE COLOR (Cambiá esto para tunear el estilo)   https://www.realtimecolors.com/    --- */
+        :root {
+            --bg-top: #0f172a;; /* Color de arriba del fondo */
+            --bg-bottom: #3f4c6b; /* Color de abajo (gradiente) */
+            --btn-bg: rgba(255, 255, 255, 0.1); /* Transparencia del botón */
+            --btn-border: #ffffff; /* Color del borde de los botones */
+            --text-color: #ffffff; /* Color de las letras */
+        }
+
+/* ============================================================ */
+  /* OPCIÓN ORIGINAL 
+  :root {
+            --bg-top: #606c88; 
+            --bg-bottom: #3f4c6b; 
+            --btn-bg: rgba(255, 255, 255, 0.1); 
+            --btn-border: #ffffff; 
+            --text-color: #ffffff; 
+  }*/
+  /* ============================================================ */
+
+  
+
+/* ============================================================ */
+  /* OPCIÓN 1: AZUL OXFORD (ACTIVO POR DEFECTO) 
+  :root {
+      --bg-top: #0f172a;
+      --bg-bottom: #1e293b;
+      --btn-bg: rgba(255, 255, 255, 0.05);
+      --btn-border: #94a3b8;
+      --text-color: #f8fafc;
+  }*/
+  /* ============================================================ */
+
+  /* ============================================================
+  OPCIÓN 2: VERDE SELVA (DESCOMENTAR PARA USAR)
+  ============================================================
+  :root {
+      --bg-top: #064e3b;
+      --bg-bottom: #022c22;
+      --btn-bg: rgba(255, 255, 255, 0.08);
+      --btn-border: #059669;
+      --text-color: #ffffff;
+  }
+  */
+
+  /* ============================================================
+  OPCIÓN 3: GRAFITO Y CARBÓN
+  ============================================================
+  :root {
+      --bg-top: #171717;
+      --bg-bottom: #262626;
+      --btn-bg: rgba(255, 255, 255, 0.03);
+      --btn-border: #404040;
+      --text-color: #e5e5e5;
+  }
+  */
+
+  /* ============================================================
+  OPCIÓN 4: BORDEAUX INSTITUCIONAL
+  ============================================================
+  :root {
+      --bg-top: #450a0a;
+      --bg-bottom: #1a0505;
+      --btn-bg: rgba(255, 255, 255, 0.1);
+      --btn-border: #991b1b;
+      --text-color: #ffffff;
+  }
+  */
+
+  /* ============================================================
+  OPCIÓN 5: PETRÓLEO / DEEP TEAL
+  ============================================================
+  :root {
+      --bg-top: #134e4a;
+      --bg-bottom: #042f2e;
+      --btn-bg: rgba(255, 255, 255, 0.07);
+      --btn-border: #2dd4bf;
+      --text-color: #f0fdfa;
+  }
+  */
+
+  /* ... resto de tu CSS (body, .link-card, etc) ... */
+
+
+
+        * { box-sizing: border-box; margin: 0; padding: 0; }
+
+        body {
+            background: linear-gradient(180deg, var(--bg-top) 0%, var(--bg-bottom) 100%); /* https://cssgradient.io/ */
+            min-height: 100vh;
+            font-family: 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            color: var(--text-color);
+            padding: 40px 20px;
+        }
+
+        /* Perfil */
+        .profile-container { text-align: center; margin-bottom: 30px; }
+        .avatar {
+            width: 180px; /* <--- Aumentalo si querés que destaque más (estaba en 96) */
+            height: 180px; /* <--- Mantenelos iguales para que sea un círculo perfecto */
+            border-radius: 50%; /* 50% lo hace círculo. 0% lo hace cuadrado. */
+            border: 2px solid white; /* Grosor del borde de la foto */
+            object-fit: cover;
+            margin-bottom: 15px;
+        }
+        .username { font-size: 22px; font-weight: 700; margin-bottom: 20px; letter-spacing: -0.5px; }
+
+        /* Iconos Sociales superiores */
+        .social-bar { display: flex; gap: 25px; margin-bottom: 40px; font-size: 24px; }
+        .social-bar a { color: white; text-decoration: none; transition: 0.3s; }
+        .social-bar a:hover { opacity: 0.7; transform: scale(1.1); }
+
+        /* Botones de Enlace */
+        .links-container { width: 100%; max-width: 450px; display: flex; flex-direction: column; gap: 16px; }
+        
+        .link-card {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 16px 20px;
+            background: var(--btn-bg);
+            border: 1px solid var(--btn-border);
+            border-radius: 50px; /* Estilo píldora de tu imagen */
+            text-decoration: none;
+            color: white;
+            font-weight: 600;
+            font-size: 15px;
+            transition: all 0.3s ease;
+            position: relative;
+        }
+
+        .link-card:hover {
+            background: rgba(255, 255, 255, 0.2);
+            transform: scale(1.02);
+        }
+
+        .link-card i { position: absolute; left: 25px; font-size: 18px; }
+        .dots { position: absolute; right: 25px; opacity: 0.5; font-size: 12px; }
+
+        footer { margin-top: 50px; font-size: 12px; opacity: 0.6; }
+    </style>
+</head>
+<body>
+
+    <div class="profile-container">
+        <img src="https://i.ibb.co/wZ48fbCJ/edu.jpg" class="avatar" alt="Eduardo Henquín">
+        <h1 class="username">Dr. Eduardo R. Henquín</h1>
+    </div>
+
+    <div class="social-bar">
+        <a href="mailto:ehenquin@gmail.com" onclick="logClick('Email')"><i class="fa-regular fa-envelope"></i></a>
+        <a href="https://instagram.com/ehenquin" onclick="logClick('Instagram')"><i class="fa-brands fa-instagram"></i></a>
+        <a href="https://facebook.com/eduardo.henquin/" onclick="logClick('Facebook')"><i class="fa-brands fa-facebook"></i></a>
+        <a href="https://wa.me/543424307388" onclick="logClick('WhatsApp')"><i class="fa-brands fa-whatsapp"></i></a>
+    </div>
+
+    <div class="links-container">
+        <a href="https://ehenquin.github.io/Acerca_de_mi/" class="link-card" onclick="logClick('Acerca de mi')">💻 ▶ Acerca de mí <span class="dots">⋮</span></a>
+        <a href="https://scholar.google.com/citations?user=qErGe8QAAAAJ&hl=es" class="link-card" onclick="logClick('Scholar')">🎓 ▶ Google Scholar <span class="dots">⋮</span></a>
+        <a href="https://ehenquin.github.io/Publicaciones-Cientificas/" class="link-card" onclick="logClick('Articulos')">📄 ▶ Articulos Científicos Escritos <span class="dots">⋮</span></a>
+        <a href="https://orcid.org/0000-0001-7157-0199" class="link-card" onclick="logClick('ORCID')">🆔 ▶ ORCID "Eduardo Rubén Henquín" <span class="dots">⋮</span></a>
+        <a href="https://drive.google.com/file/d/1f1qG-aEt_fy-aWeyqJraOqdGCmGBTctz/view?usp=sharing" class="link-card" onclick="logClick('CV')">📖 ▶ CV <span class="dots">⋮</span></a>
+        <a href="https://ehenquin.github.io/github.io/" class="link-card" onclick="logClick('LUNIX')">⏳ ▶ Cuenta Regresiva trabajos LUNIX <span class="dots">⋮</span></a>
+        <a href="https://www.linkedin.com/in/eduardo-henquin/" class="link-card" onclick="logClick('LinkedIn')">💼 ▶ LinkEdIn <span class="dots">⋮</span></a>
+        <a href="https://bibliotecavirtual.unl.edu.ar:8443/handle/11185/84" class="link-card" onclick="logClick('Tesis')">📖 ▶ Tesis Doctoral <span class="dots">⋮</span></a>
+        <a href="http://www.ingar.santafe-conicet.gov.ar/institucional/personal/" class="link-card" onclick="logClick('INGAR')">🏛️ ▶ INGAR <span class="dots">⋮</span></a>
+        <a href="https://www.conicet.gov.ar/new_scp/detalle.php?id=30940" class="link-card" onclick="logClick('CONICET')">👦 ▶ My page on CONICET <span class="dots">⋮</span></a>
+        <a href="https://www.instagram.com/adiestramientocaninokcsf/" class="link-card" onclick="logClick('Adiestramiento')">🐕 ▶ Instagram Adiestramiento Canino <span class="dots">⋮</span></a>
+        <a href="https://ehenquin.github.io/diccionario-lsa" class="link-card" onclick="logClick('App Diccionario')">🤘 ▶ App diccionario LSA-AR <span class="dots">⋮</span></a>
+    </div>
+
+    <footer>Eduardo Henquín © 2026</footer>
+
+<script>
+    // !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+    // !!! CONFIGURACIÓN DE LOGS (DOBLE FUNCIÓN: VISTAS Y CLICS) !!!
+    // !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+    const LOG_URL = "https://script.google.com/macros/s/AKfycbwATJI3snGrUdXapC1rqzm70fhluJ4WM_FJHQJZTvBgq08XzK4bmBswR5QCAhIyT25W/exec";
+
+    // 1. FUNCIÓN GENERAL PARA ENVIAR DATOS A GOOGLE SHEETS
+    async function enviarLog(evento, detalle) {
+        try {
+            await fetch(LOG_URL, {
+                method: "POST",
+                mode: "no-cors", 
+                body: JSON.stringify({
+                    event: evento,
+                    user: detalle,
+                    page: "Linktree_Personal",
+                    ua: navigator.userAgent
+                })
+            });
+        } catch (e) { console.log("Error de log"); }
+    }
+
+    // 2. REGISTRO AUTOMÁTICO DE VISITA (Se dispara solo al abrir la página)
+    window.onload = () => {
+        enviarLog("PAGINA_ABIERTA", "Visitante_Anonimo");
+    };
+
+    // 3. REGISTRO DE CLIC EN BOTONES (Se dispara al tocar un link)
+    function logClick(linkName) {
+        enviarLog("CLIC_BOTON", linkName);
+    }
+</script>
+</body>
+</html>
