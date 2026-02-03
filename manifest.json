@@ -1,20 +1,21 @@
 {
-  "name": "Diccionario LSA-AR",
-  "short_name": "LSA-AR",
-  "start_url": ".",
+  "name": "LinkTree Pro - Dr. Eduardo Henquín",
+  "short_name": "LinkTree Pro",
+  "start_url": "/LinkTreePro/",
+  "scope": "/LinkTreePro/",
   "display": "standalone",
   "background_color": "#1a237e",
   "theme_color": "#1a237e",
   "icons": [
     {
-      "src": "https://i.postimg.cc/Y2ZmtXJD/ICONO.png",
+      "src": "https://i.postimg.cc/Gmj30XGx/icono.jpg",
       "sizes": "192x192",
-      "type": "image/png"
+      "type": "image/jpeg"
     },
     {
-      "src": "https://i.postimg.cc/Y2ZmtXJD/ICONO.png",
+      "src": "https://i.postimg.cc/Gmj30XGx/icono.jpg",
       "sizes": "512x512",
-      "type": "image/png"
+      "type": "image/jpeg"
     }
   ]
 }
