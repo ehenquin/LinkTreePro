@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="es">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -11,7 +12,7 @@
 
 
 
-  
+
   <style>
     /* --- VARIABLES DE COLOR --- */
     :root {
@@ -22,7 +23,11 @@
       --text-color: #ffffff;
     }
 
-    * { box-sizing: border-box; margin: 0; padding: 0; }
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
 
     body {
       background: linear-gradient(180deg, var(--bg-top) 0%, var(--bg-bottom) 100%);
@@ -40,7 +45,11 @@
     }
 
     /* Perfil */
-    .profile-container { text-align: center; margin-bottom: 30px; }
+    .profile-container {
+      text-align: center;
+      margin-bottom: 30px;
+    }
+
     .avatar {
       width: 180px;
       height: 180px;
@@ -49,15 +58,41 @@
       object-fit: cover;
       margin-bottom: 15px;
     }
-    .username { font-size: 22px; font-weight: 700; margin-bottom: 20px; letter-spacing: -0.5px; }
+
+    .username {
+      font-size: 22px;
+      font-weight: 700;
+      margin-bottom: 20px;
+      letter-spacing: -0.5px;
+    }
 
     /* Iconos Sociales superiores */
-    .social-bar { display: flex; gap: 25px; margin-bottom: 40px; font-size: 24px; }
-    .social-bar a { color: white; text-decoration: none; transition: 0.3s; }
-    .social-bar a:hover { opacity: 0.7; transform: scale(1.1); }
+    .social-bar {
+      display: flex;
+      gap: 25px;
+      margin-bottom: 40px;
+      font-size: 24px;
+    }
+
+    .social-bar a {
+      color: white;
+      text-decoration: none;
+      transition: 0.3s;
+    }
+
+    .social-bar a:hover {
+      opacity: 0.7;
+      transform: scale(1.1);
+    }
 
     /* Botones de Enlace */
-    .links-container { width: 100%; max-width: 450px; display: flex; flex-direction: column; gap: 16px; }
+    .links-container {
+      width: 100%;
+      max-width: 450px;
+      display: flex;
+      flex-direction: column;
+      gap: 16px;
+    }
 
     .link-card {
       display: flex;
@@ -89,10 +124,24 @@
       margin: 10px 0;
     }
 
-    .link-card i { position: absolute; left: 25px; font-size: 18px; }
-    .dots { position: absolute; right: 25px; opacity: 0.5; font-size: 12px; }
+    .link-card i {
+      position: absolute;
+      left: 25px;
+      font-size: 18px;
+    }
 
-    footer { margin-top: 50px; font-size: 12px; opacity: 0.6; }
+    .dots {
+      position: absolute;
+      right: 25px;
+      opacity: 0.5;
+      font-size: 12px;
+    }
+
+    footer {
+      margin-top: 50px;
+      font-size: 12px;
+      opacity: 0.6;
+    }
 
     .section-title {
       margin: 35px 0 15px 0;
@@ -106,7 +155,7 @@
     .section-divider {
       width: 100%;
       height: 1px;
-      background: linear-gradient(to right, transparent, rgba(255,255,255,0.5), transparent);
+      background: linear-gradient(to right, transparent, rgba(255, 255, 255, 0.5), transparent);
       margin: 30px 0 10px 0;
     }
 
@@ -129,8 +178,8 @@
        ========================================================= */
 
     /* Capa de imagen (muy tenue) */
-    body::before{
-      content:"";
+    body::before {
+      content: "";
       position: fixed;
       inset: 0;
       z-index: -2;
@@ -153,12 +202,12 @@
     }
 
     /* Capa para proteger el texto (oscurece apenas, sin tapar el degradado) */
-    body::after{
-      content:"";
+    body::after {
+      content: "";
       position: fixed;
       inset: 0;
       z-index: -1;
-      background: radial-gradient(circle at top, rgba(0,0,0,0.15), rgba(0,0,0,0.38));
+      background: radial-gradient(circle at top, rgba(0, 0, 0, 0.15), rgba(0, 0, 0, 0.38));
       pointer-events: none;
     }
   </style>
@@ -176,50 +225,116 @@
   <div class="social-bar">
     <a href="mailto:ehenquin@gmail.com" onclick="logClick('Email')"><i class="fa-regular fa-envelope"></i></a>
     <a href="https://instagram.com/ehenquin" onclick="logClick('Instagram')"><i class="fa-brands fa-instagram"></i></a>
-    <a href="https://facebook.com/eduardo.henquin/" onclick="logClick('Facebook')"><i class="fa-brands fa-facebook"></i></a>
+    <a href="https://facebook.com/eduardo.henquin/" onclick="logClick('Facebook')"><i
+        class="fa-brands fa-facebook"></i></a>
     <a href="https://wa.me/543424307388" onclick="logClick('WhatsApp')"><i class="fa-brands fa-whatsapp"></i></a>
   </div>
 
   <div class="links-container">
-    <a href="https://ehenquin.github.io/Acerca_de_mi/" class="link-card" onclick="logClick('Acerca de mi')">💻 ▶ Acerca de mí <span class="dots">⋮</span></a>
+    <a href="https://ehenquin.github.io/Acerca_de_mi/" class="link-card" onclick="logClick('Acerca de mi')">💻 ▶ Acerca
+      de mí <span class="dots">⋮</span></a>
     <hr class="separator">
-    <a href="https://scholar.google.com/citations?user=qErGe8QAAAAJ&hl=es" class="link-card" onclick="logClick('Scholar')">🎓 ▶ Google Scholar <span class="dots">⋮</span></a>
-    <a href="https://ehenquin.github.io/Publicaciones-Cientificas/" class="link-card" onclick="logClick('Articulos')">📄 ▶ Articulos Científicos Escritos <span class="dots">⋮</span></a>
-    <a href="https://orcid.org/0000-0001-7157-0199" class="link-card" onclick="logClick('ORCID')">🆔 ▶ ORCID "Eduardo Rubén Henquín" <span class="dots">⋮</span></a>
-    <a href="https://drive.google.com/file/d/1f1qG-aEt_fy-aWeyqJraOqdGCmGBTctz/view?usp=sharing" class="link-card" onclick="logClick('CV')">📖 ▶ CV <span class="dots">⋮</span></a>
+    <a href="https://scholar.google.com/citations?user=qErGe8QAAAAJ&hl=es" class="link-card"
+      onclick="logClick('Scholar')">🎓 ▶ Google Scholar <span class="dots">⋮</span></a>
+    <a href="https://ehenquin.github.io/Publicaciones-Cientificas/" class="link-card" onclick="logClick('Articulos')">📄
+      ▶ Articulos Científicos Escritos <span class="dots">⋮</span></a>
+    <a href="https://orcid.org/0000-0001-7157-0199" class="link-card" onclick="logClick('ORCID')">🆔 ▶ ORCID "Eduardo
+      Rubén Henquín" <span class="dots">⋮</span></a>
+    <a href="https://drive.google.com/file/d/1f1qG-aEt_fy-aWeyqJraOqdGCmGBTctz/view?usp=sharing" class="link-card"
+      onclick="logClick('CV')">📖 ▶ CV <span class="dots">⋮</span></a>
     <hr class="separator">
-    <a href="https://ehenquin.github.io/github.io/" class="link-card" onclick="logClick('LUNIX')">⏳ ▶ Cuenta Regresiva trabajos LUNIX <span class="dots">⋮</span></a>
-    <a href="https://www.linkedin.com/in/eduardo-henquin/" class="link-card" onclick="logClick('LinkedIn')">💼 ▶ LinkEdIn <span class="dots">⋮</span></a>
+    <a href="https://ehenquin.github.io/github.io/" class="link-card" onclick="logClick('LUNIX')">⏳ ▶ Cuenta Regresiva
+      trabajos LUNIX <span class="dots">⋮</span></a>
+    <a href="https://www.linkedin.com/in/eduardo-henquin/" class="link-card" onclick="logClick('LinkedIn')">💼 ▶
+      LinkEdIn <span class="dots">⋮</span></a>
     <hr class="separator">
-    <a href="https://bibliotecavirtual.unl.edu.ar:8443/handle/11185/84" class="link-card" onclick="logClick('Tesis')">📖 ▶ Tesis Doctoral <span class="dots">⋮</span></a>
-    <a href="http://www.ingar.santafe-conicet.gov.ar/institucional/personal/" class="link-card" onclick="logClick('INGAR')">🏛️ ▶ INGAR <span class="dots">⋮</span></a>
-    <a href="https://www.conicet.gov.ar/new_scp/detalle.php?id=30940" class="link-card" onclick="logClick('CONICET')">👦 ▶ My page on CONICET <span class="dots">⋮</span></a>
+    <a href="https://bibliotecavirtual.unl.edu.ar:8443/handle/11185/84" class="link-card" onclick="logClick('Tesis')">📖
+      ▶ Tesis Doctoral <span class="dots">⋮</span></a>
+    <a href="http://www.ingar.santafe-conicet.gov.ar/institucional/personal/" class="link-card"
+      onclick="logClick('INGAR')">🏛️ ▶ INGAR <span class="dots">⋮</span></a>
+    <a href="https://www.conicet.gov.ar/new_scp/detalle.php?id=30940" class="link-card" onclick="logClick('CONICET')">👦
+      ▶ My page on CONICET <span class="dots">⋮</span></a>
     <hr class="separator">
     <hr class="separator">
-    <a href="https://www.instagram.com/adiestramientocaninokcsf/" class="link-card" onclick="logClick('Adiestramiento')">🐕 ▶ Instagram Adiestramiento Canino <span class="dots">⋮</span></a>
+    <a href="https://www.instagram.com/adiestramientocaninokcsf/" class="link-card"
+      onclick="logClick('Adiestramiento')">🐕 ▶ Instagram Adiestramiento Canino <span class="dots">⋮</span></a>
 
 
 
     <div class="section-divider"></div>
     <div class="section-title">APLICACIONES REALIZADAS</div>
 
-    <a href="https://ehenquin.github.io/diccionario-lsa" class="link-card" onclick="logClick('App Diccionario')">🤘 ▶ App diccionario LSA-AR <span class="dots">⋮</span></a>
-    <a href="https://youtu.be/-UHb5GD6DTU" class="link-card" onclick="logClick('Video de Funcionameinto del diccionario LSA-AR')">🎥🤘 ▶ Video | Diccionario LSA-AR <span class="dots">⋮</span></a>
+    <a href="https://ehenquin.github.io/diccionario-lsa" class="link-card" onclick="logClick('App Diccionario')">🤘 ▶
+      App diccionario LSA-AR <span class="dots">⋮</span></a>
+    <a href="https://youtu.be/-UHb5GD6DTU" class="link-card"
+      onclick="logClick('Video de Funcionameinto del diccionario LSA-AR')">🎥🤘 ▶ Video | Diccionario LSA-AR <span
+        class="dots">⋮</span></a>
     <hr class="separator">
 
-    <a href="https://ehenquin.github.io/Exposiciones_Estructura_Y_Belleza_Kennel_Club_Santa_Fe/" class="link-card" onclick="logClick('Planilla Exposiciones')">🏆 ▶ Planilla electrónica de Exposiciones Generales Perros <span class="dots">⋮</span></a>
-    <a href="https://www.youtube.com/watch?v=D0ZzIglw9nU" class="link-card" onclick="logClick('Video de Funcionameinto Planilla General de Exposiciones')">🎥🐕 ▶ Video | Planilla GRALES. Exposiciones <span class="dots">⋮</span></a>
+    <a href="https://ehenquin.github.io/Exposiciones_Estructura_Y_Belleza_Kennel_Club_Santa_Fe/" class="link-card"
+      onclick="logClick('Planilla Exposiciones')">🏆 ▶ Planilla electrónica de Exposiciones Generales Perros <span
+        class="dots">⋮</span></a>
+    <a href="https://www.youtube.com/watch?v=D0ZzIglw9nU" class="link-card"
+      onclick="logClick('Video de Funcionameinto Planilla General de Exposiciones')">🎥🐕 ▶ Video | Planilla GRALES.
+      Exposiciones <span class="dots">⋮</span></a>
     <hr class="separator">
 
-    <a href="https://ehenquin.github.io/Exposiciones_Estructura_Y_Belleza_Kennel_Club_Santa_Fe_LOCALES/" class="link-card" onclick="logClick('Planilla Exposiciones')">🏆 ▶ Planilla electrónica de Exposiciones Locales Perros <span class="dots">⋮</span></a>
-    <a href="https://youtu.be/zhvdoxHpqRc?si=bQhcrxC1fZdel_tJ" class="link-card" onclick="logClick('Video de Funcionameinto Planilla Locales de Exposiciones')">🎥🐕 ▶ Video | Planilla LOCALES Exposiciones <span class="dots">⋮</span></a>
-    <a href="https://ehenquin.github.io/Exposiciones_Estructura_Y_Belleza_Kennel_Club_Santa_Fe_LOCALES/public.html" class="link-card" onclick="logClick('Link Público | Resultados LOCALES')">🏆 ▶ Link Público | Resultados LOCALES <span class="dots">⋮</span></a>
-    
-    
+    <a href="https://ehenquin.github.io/Exposiciones_Estructura_Y_Belleza_Kennel_Club_Santa_Fe_LOCALES/"
+      class="link-card" onclick="logClick('Planilla Exposiciones')">🏆 ▶ Planilla electrónica de Exposiciones Locales
+      Perros <span class="dots">⋮</span></a>
+    <a href="https://youtu.be/zhvdoxHpqRc?si=bQhcrxC1fZdel_tJ" class="link-card"
+      onclick="logClick('Video de Funcionameinto Planilla Locales de Exposiciones')">🎥🐕 ▶ Video | Planilla LOCALES
+      Exposiciones <span class="dots">⋮</span></a>
+    <a href="https://ehenquin.github.io/Exposiciones_Estructura_Y_Belleza_Kennel_Club_Santa_Fe_LOCALES/public.html"
+      class="link-card" onclick="logClick('Link Público | Resultados LOCALES')">🏆 ▶ Link Público | Resultados LOCALES
+      <span class="dots">⋮</span></a>
+
+
     <div class="section-divider"></div>
     <div class="section-title">TRABAJOS DE ACTOR</div>
-    <a href="https://www.youtube.com/watch?v=KNxl7s6Ey6I" class="link-card" onclick="logClick('Publicidad Cerveza Santa Fe')">🎬🍺 ▶ Publicidad Cerveza Santa Fe (Actor) <span class="dots">⋮</span></a>
+    <a href="https://www.youtube.com/watch?v=KNxl7s6Ey6I" class="link-card"
+      onclick="logClick('Publicidad Cerveza Santa Fe')">🎬🍺 ▶ Publicidad Cerveza Santa Fe (Actor) <span
+        class="dots">⋮</span></a>
     <hr class="separator">
+
+
+    <div class="section-title">NOTAS SOBRE VAPEO</div>
+
+    <a href="https://www.youtube.com/watch?v=LXaelCyrqmw" class="link-card"
+      onclick="logClick('Eduardo Henquin | El cigarrillo es una endemia mundial (Martín Sperati -Despacho Play) - 2026')">👉💨
+      + 🧪 ▶ Martín Sperati - Despacho Play - 2026
+      <span class="dots">⋮</span></a>
+
+    <a href="https://www.youtube.com/watch?v=ny2yBB6IAd0" class="link-card"
+      onclick="logClick('La ventaja de los dispositivos de vapeo es poder manejar la dependencia')">👉💨 + ⚡ ▶ Martín
+      Sperati - Sol Play 91.5 - 2023
+      <span class="dots">⋮</span></a>
+
+    <a href="https://www.youtube.com/watch?v=B2k7Q_-xgc4" class="link-card"
+      onclick="logClick('Unidos Por El Vapeo!')">👉💨 + 🌀 ▶ Unidos Por El Vapeo! - 2023
+      <span class="dots">⋮</span></a>
+
+    <a href="https://youtu.be/rMx69p7MKpc?si=HQXNQ_ZCF6rUQg1n" class="link-card"
+      onclick="logClick('Hernan Daicich - @FrecuenciaZero')">👉💨 + 💡 ▶ Hernan Daicich - @FrecuenciaZero - 2021
+      <span class="dots">⋮</span></a>
+
+    <a href="https://www.youtube.com/watch?v=U7HpxciY-iM" class="link-card" onclick="logClick('TELEFE - Rosario')">👉💨
+      + 🌀 ▶ TELEFE - Rosario - 2019
+      <span class="dots">⋮</span></a>
+
+    <a href="https://www.youtube.com/watch?v=YBIEvKfFVI8" class="link-card"
+      onclick="logClick('Recreo Diario Canal 13 Santa Fe')">👉💨
+      + 🌀 ▶ Recreo Diario Canal 13 Santa Fe - 2018
+      <span class="dots">⋮</span></a>
+
+    <a href="https://www.youtube.com/watch?v=PNRUdjBEQHs" class="link-card" onclick="logClick('Estilo RPM - C5SF')">👉💨
+      + 🌀 ▶ Estilo RPM - C5SF - 2018
+      <span class="dots">⋮</span></a>
+
+    <hr class="separator">
+
+
+
   </div>
 
   <footer>Eduardo Henquín © 2026</footer>
@@ -276,4 +391,5 @@
   </script>
 
 </body>
+
 </html>
