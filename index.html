@@ -228,6 +228,7 @@
     <a href="https://facebook.com/eduardo.henquin/" onclick="logClick('Facebook')"><i
         class="fa-brands fa-facebook"></i></a>
     <a href="https://wa.me/543424307388" onclick="logClick('WhatsApp')"><i class="fa-brands fa-whatsapp"></i></a>
+    <a href="#" onclick="compartirLink(event)"><i class="fa-solid fa-share-nodes"></i></a>
   </div>
 
   <div class="links-container">
@@ -339,6 +340,31 @@
       enviarLog("CLIC_BOTON", linkName);
     }
   </script>
+
+  <!-- Compartir el perfil -->
+  <script>
+    function compartirLink(event) {
+      event.preventDefault();
+
+      const linkPerfil = "https://ehenquin.github.io/LinkTreePro/";
+
+      if (navigator.share) {
+        navigator.share({
+          title: "Dr. Eduardo R. Henquín",
+          text: "Te comparto mi LinkTree Pro:",
+          url: linkPerfil
+        }).catch(() => { });
+      } else {
+        navigator.clipboard.writeText(linkPerfil);
+        alert("Link copiado al portapapeles");
+      }
+    }
+  </script>
+
+</body>
+
+
+
 
 </body>
 
